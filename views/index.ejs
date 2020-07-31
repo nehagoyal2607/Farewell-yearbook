@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yearbook 2020</title>
+    <link rel="stylesheet" href="/yearbook.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Ranchers&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Permanent+Marker&family=Ranchers&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Arapey:ital@0;1&family=Permanent+Marker&family=Ranchers&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Nanum+Myeongjo:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Nanum+Myeongjo:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kaushan+Script&family=Patrick+Hand&family=Playball&family=Vast+Shadow&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="firstsec" id="firstsect">
+   
+       <div class="row">
+           
+           <div id="text"><p style="font-size: 9em; margin-left: 30px;margin-top:-400px;font-family: 'Playball', cursive;">Farewell Yearbook</p>
+           </div> 
+         
+           <br>
+           <div id="batch">
+			   <div>
+				    <p style=" margin-left: 30px;font-size: 7em;margin-top:-200px;font-family: 'Playball', cursive;">Batch of 2020</p>
+			   </div>
+			  
+		   <div id="quote" style="margin-top:150px;font-size:2em; width:50%; margin-left:20px">
+			<p>It feels heavy to say goodbye,</p>
+        	<p>but you all will carry a piece of each other into everything that you do next,</p>
+			<p>to remind yourselves of who you are, and of who you're meant to be.</p>
+			   <p>
+				   ~Juniors of DTU
+			   </p>
+	   </div>
+		   </div>       
+                   
+        </div>
+        <br>
+        
+   
+    </div>
+
+    <div class="secondsec" id="secondsect">
+        <div class="jumbotron jumbotron-fluid" id="jumbo">
+            <div class="container">
+            <h1 class="display-4" style="font-size:3em">Popularly known as</h1>
+            <p><h2 style="font-size:4em"><%=data.titles[1].title%></h2></p>
+            </div>
+        </div>  
+        <div class="row" id="content">
+            <div class="col-md-4" id="dp"> 
+                <div class="polaroid">
+					<div class="userpic">
+						<img style="position: absolute; z-index: 1; border:0px; width:150px; height:120px; margin-top:-100px; margin-left:70px;margin-bottom:500px" src="http://www.dtufarewell2020.in/assets/images/cap.png" alt="">
+						<img src="http://<%=data.profile.photo%>" style="width:100%; position:relative;top:0;left:0">
+					</div>
+                    
+                      <div class="container1">
+                      <p class="name" id="name"><%=data.profile.name%></p>
+						<p class="name" style="font-size:1em">BATCH: <%-data.profile.batch%></p>
+                      <p id="bio">
+						  <%-data.profile.quote%>
+					</p>
+                      </div>
+                </div>
+            </div>
+            <div class="col-md-8" id="titlebox" >
+              <h1 id="h1title" style='margin-bottom:100px'>TITLES</h1>
+                <div class="titles" id="titlebox1">
+                  <%data.titles.forEach(function(title){ %>
+					<p><%=title.title%></p>
+				  <%}) %>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+    <div class="thirdsec" id="thirdsect">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+        <ul>
+			<%data.scribbles.forEach(function(scribble){ %>
+				<li>
+				<a href="#">
+				  <h2><%=scribble.name.toUpperCase()%><span><img src="http://<%=scribble.photo%>" style="width:100px;height:100px;display:inline-block;border-radius:25px"></span></h2>
+				  <p><%-scribble.scribble_text%></p>
+				</a>
+				</li>
+			<%})%>
+          
+        </ul>
+                </div> 
+                <div class="col-md-2">
+                    <div class="heading">
+                        <p>S</p>
+                        <p>C</p>
+                        <p>R</p>
+                        <p>I</p>
+                        <p>B</p>
+                        <p>B</p>
+                        <p>L</p>
+                        <p>E</p>
+                        <p>S</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>   
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>

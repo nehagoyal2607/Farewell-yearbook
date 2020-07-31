@@ -1,0 +1,322 @@
+@import url(https://fonts.googleapis.com/css?family=Patua+One);
+
+#firstsect{
+    display: flex;
+    background-image: url(/assets/bgrg.jpg);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    background-size: 100% 100% ;
+    /*background-attachment: scroll;*/
+    background-position: center ;
+    font-family: 'Pacifico', cursive;
+}
+
+#secondsect{
+    display: flex;
+    align-items: center;
+    color: white;
+    background-image: url(assets/oat.jpeg);
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center ;
+}
+
+#thirdsect{
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /*background:url("https://blog.sibmpune.edu.in/wp-content/uploads/2016/03/ScribDay-6.jpg");*/
+    /*opacity: 0.75;*/
+    /*position: relative;*/
+    background: url("https://previews.123rf.com/images/natashapankina/natashapankina1604/natashapankina160400050/54971921-seamless-background-hand-drawn-doodle-books-and-reading-set-vector-illustration-sketchy-book-icons-e.jpg");
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    /* background-size: cover; */
+    background-position: center;
+
+}
+.row{
+    width: 100%;
+}
+/*FIRST SECTION*/
+#farewell{
+    /* writing-mode: vertical-lr; */
+    font-size: 6em;
+    width: 5%;
+    margin-left: -100px;
+}
+
+#yearbook{
+    font-size: 13em;
+    width: 70%;
+    top: -70px;
+    position: relative;
+    margin-left: -80px
+}
+/*SECOND SECTION*/
+#secondsect img{
+    height: 15em;
+    margin: 0px;
+    filter: drop-shadow(0px 20px 20px rgba(88, 87, 87, 0.7));
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+
+#jumbo{
+  background-color: transparent;
+  color : black;
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  padding: 10px;
+
+}
+#secondsect h2{
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  font-size: 50px;
+}
+#secondsect h1{
+  text-align: center;
+  color: #e6f7ff;
+  font-family: 'Nanum Myeongjo', serif;
+}
+#secondsect h3{
+  color: black;
+}
+/*/TITLE/*/
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-top: 120px;
+  margin-left: 50px;
+}
+
+div.container1 {
+  text-align: center;
+  padding: 10px 20px;
+}
+#id{
+  color: black;
+  margin-top: 50px;
+}
+.name{
+  color: black;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+}
+#h1title{
+  font-size: 60px;
+  color: black;
+
+}
+#titlebox{
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 130px;
+
+}
+#titlebox1 p{
+  float:left;
+  background-color:#000000; 
+  width:auto; height:80px;
+  line-height:1.5em;
+  font-size:1em;
+  text-align:center;
+  position:relative;
+  margin:30px 15px;
+ /* font-family: 'Patua One', cursive;*/
+  color:white;
+  padding:0 10px;
+  /font-family: 'Poiret One', cursive;/
+  font-family: 'Kalam', cursive;
+
+
+}
+#titlebox1 p::before, #titlebox1 p::after {
+  background-color:#ffffff; 
+  width:50px; height:80px;
+  content:'';
+  display:block; 
+  transform:skewY(20deg);
+  position:absolute;
+  z-index:-1;
+
+}
+
+#titlebox1 p::before {top:10px; left:0; }
+#titlebox1 p::after {top:-10px; right:0; }
+
+#titlebox1 p:nth-child(odd){
+    background-color:#ffffff ;
+    top:-30px;
+    color: black;
+}
+#titlebox1 p:nth-child(odd)::before, #titlebox1 p:nth-child(odd)::after{
+   background-color:#000000;
+  color: white;
+}
+/*#titlebox1{
+  margin-left: -250px;
+}*/
+#bio{
+  font-family: 'Amatic SC', cursive;
+  color: black;
+  font-size: 30px;
+}
+
+
+/*scribbles*/
+    #thirdesect * {
+      margin:0;
+      padding:0;
+    }
+    #thirdsect ul{
+      font-family:arial,sans-serif;
+      font-size:100%;
+      margin: 0 -50px;
+      color:#fff;
+      overflow:hidden;
+      padding:3em;
+    }
+    #thirdsect h2,p {
+      font-size:100%;
+      font-weight:normal;
+      text-align: center;
+    }
+    #thirdsect ul,li {
+      list-style:none;
+		float:top;
+		-webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+    }
+    #thirdsect ul li a{
+      text-decoration:none;
+      color:#000;
+      background:#ffc;
+      display:block;
+      grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
+      grid-gap: 5px;
+      padding:2.5em;
+      max-width: 500px;
+      background: url("https://i.pinimg.com/736x/35/6f/19/356f19b432947a144702f6394dc1f672.jpg");
+
+      /* Firefox */
+        -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+        /* Safari+Chrome */
+        -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        /* Opera */
+        box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+        transform:rotate(-6deg);
+    }
+    #thirdsect ul li:nth-child(even) a{
+      -o-transform: rotate(4deg);
+      -webkit-transform: rotate(4deg);
+      -moz-transform: rotate(4deg);
+      transform:rotate(4deg);
+      position:relative;
+      top:30px;
+      -webkit-transform: scale(1.25);
+      -moz-transform: scale(1.25);
+      -o-transform: scale(1.25);
+      max-width: 300px;
+      background: url("https://i.pinimg.com/originals/27/7a/32/277a32c6b794e4477241a4ffd3e38fe2.png");
+    }
+    #thirdsect ul li:nth-child(3n) a{
+      -o-transform: rotate(-3deg);
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+      transform:rotate(-3deg);
+      position:relative;
+      top:-5px;
+        max-width: 700px; 
+        background: url("https://data.whicdn.com/images/198817434/original.jpg"); 
+    }
+    #thirdsect ul li:nth-child(5n) a{
+      -o-transform:rotate(5deg);
+      -webkit-transform:rotate(5deg);
+      -moz-transform:rotate(5deg);
+      transform:rotate(5deg);
+      position:relative;
+      top:-10px;
+      -webkit-transform: scale(0.9);
+      -moz-transform: scale(0.9);
+      -o-transform: scale(0.9);
+       max-width: 600px;
+    }
+    #thirdsect ul li {
+      margin:1em;
+      float:left;
+    }
+    #thirdsect ul li h2{
+      font-size:250%;
+      font-weight:bold;
+      padding-bottom:10px;
+	  font-family:"Vollkorn";
+	  color:#2f1855;
+    }
+    #thirdsect ul li p{
+      font-family:"Reenie Beanie",arial,sans-serif;
+      font-size:180%;
+	  line-height:1em;
+    }
+
+.heading p{
+    height: auto;
+    width: 150px;
+    /*background-color: black;*/
+    color:black;
+    font-size: 7em;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin:0 80px 10px;
+    border-radius: 40px;
+	font-family:"Merienda One";
+    font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+    color: rgba(0,0,0,0.7);
+    text-shadow: 3px 3px 3px #fff;
+}
+.heading p:nth-child(even){
+    margin:0 100px 10px;
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color:#799FCB;
+}
+.heading p:nth-child(odd){
+    margin:-20px 50px -20px;
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color:#957DAD;
+}
+.heading{
+    padding-top:50px;
+    margin:10px 0 0 -100px;
+}
