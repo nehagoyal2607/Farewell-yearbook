@@ -29,7 +29,7 @@
     height: 100vh;
     background-size: cover;
     background-attachment: scroll;
-    background-position: right ;
+    background-position: center right;
 }
 
 #thirdsect{
@@ -202,19 +202,20 @@ div.container1 {
     }
     #thirdsect ul,li {
       list-style:none;
-		float:top;
+		float:left;
 		-webkit-column-break-inside: avoid;
           page-break-inside: avoid;
                break-inside: avoid;
     }
     #thirdsect ul li a{
       text-decoration:none;
+	  margin: 1.7em;
       color:#000;
       background:#ffc;
       display:block;
       grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
       grid-gap: 5px;
-      padding:2.5em;
+      padding:2.9em 1em;
       max-width: 500px;
       background: url("https://i.pinimg.com/736x/35/6f/19/356f19b432947a144702f6394dc1f672.jpg");
 
