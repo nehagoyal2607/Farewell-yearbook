@@ -29,7 +29,7 @@
     height: 100vh;
     background-size: cover;
     background-attachment: scroll;
-    background-position: center ;
+    background-position: right ;
 }
 
 #thirdsect{
@@ -144,13 +144,10 @@ div.container1 {
   text-align:center;
   position:relative;
   margin:30px 15px;
- /* font-family: 'Patua One', cursive;*/
+ 
   color:white;
   padding:0 10px;
-  /font-family: 'Poiret One', cursive;/
   font-family: 'Kalam', cursive;
-
-
 }
 #titlebox1 p::before, #titlebox1 p::after {
   background-color:#ffffff; 

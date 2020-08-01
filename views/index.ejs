@@ -21,7 +21,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Arapey:ital@0;1&family=Permanent+Marker&family=Ranchers&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Nanum+Myeongjo:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Nanum+Myeongjo:wght@400;700&family=Poiret+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kaushan+Script&family=Patrick+Hand&family=Playball&family=Vast+Shadow&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -58,7 +57,10 @@
         <div class="jumbotron jumbotron-fluid" id="jumbo">
             <div class="container">
             <h1 class="display-4" style="font-size:3em">Popularly known as</h1>
-            <p><h2 style="font-size:4em"><%=data.titles[1].title%></h2></p>
+            <%if(data.titles.length != 0){%>
+				<p><h2 style="font-size:4em"><%=data.titles[0].title%></h2></p>
+			<%}%>
+				
             </div>
         </div>  
         <div class="row" id="content">
@@ -81,9 +83,16 @@
             <div class="col-md-8" id="titlebox" >
               <h1 id="h1title" style='margin-bottom:100px'>TITLES</h1>
                 <div class="titles" id="titlebox1">
-                  <%data.titles.forEach(function(title){ %>
-					<p><%=title.title%></p>
-				  <%}) %>
+					 <%if(data.titles.length == 0){ %>
+						<p>
+							Batch of 2020
+						</p>
+					<%}else{%>
+						<%data.titles.forEach(function(title){ %>
+						<p><%=title.title%></p>
+				  		<%}) %>
+					 <%} %>
+                  
                 </div>
             </div>
         </div> 
@@ -95,14 +104,30 @@
             <div class="row">
                 <div class="col-md-10">
         <ul>
-			<%data.scribbles.forEach(function(scribble){ %>
+			<%if(data.scribbles.length != 0){%>
+				<%data.scribbles.forEach(function(scribble){ %>
 				<li>
 				<a href="#">
 				  <h2><%=scribble.name.toUpperCase()%><span><img src="http://<%=scribble.photo%>" style="width:100px;height:100px;display:inline-block;border-radius:25px"></span></h2>
 				  <p><%-scribble.scribble_text%></p>
 				</a>
 				</li>
-			<%})%>
+				<%})%>
+			<li>
+				<a href="#">
+				  <h2>Juniors of DTU</h2>
+				  <p>As you enter your new life, we juniors wish you loads of success, with a cupful of happiness, mountains of achievements and good wishes to live your dream each and every moment.</p>
+				</a>
+				</li>
+			<%}else{%>
+				<li>
+				<a href="#">
+				  <h2>Juniors of DTU</h2>
+				  <p>As you enter your new life, we juniors wish you loads of success, with a cupful of happiness, mountains of achievements and good wishes to live your dream each and every moment.</p>
+				</a>
+				</li>
+			<%}%>
+			
           
         </ul>
                 </div> 
